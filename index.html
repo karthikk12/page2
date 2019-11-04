@@ -1,11 +1,37 @@
-<!DOCTYPE=html>
+<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body style="background-color:Blue">
-  
-<h1><p align="center" style="color:Yellow">...Bye ....</h1>
-  <h1><a href="https://karthikk12.github.io/MyFirstRepo1/"><p align="right" style="color:black">Home Page</p></h1>
+  <head lang="en">
+  <meta charset="UTF-8">
+  </head>
+<body>
 
-    </body>
+  <form>
+  
+  
+  <h1 style="font-size:30px; " align="center"> 
+  
+  
+    <label ><b>Enter your Input :</b></label> <input type="text" name="message"   id="user_input" align="center">Email: <input type="checkbox" id="myCheck">
+<button onclick="myFunction()">Submit</button></br></br></br></br></br></br><br /></font>
+
+  </form>
+
+
+
+
+  <label >Your input: </label>
+  <p><span id='display'></span></p>
+ 
+   
+  
+   <script language="JavaScript">
+    function myFunction() {
+    if(document.getElementById("myCheck").checked==true){
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("user_input").value;
+    }
+    }
+  </script>
+
+</body>
 </html>
