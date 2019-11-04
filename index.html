@@ -39,12 +39,14 @@ p.ex1 {
  <h1 style="font-size:20px; " align="left">    
 
 
-  <p>Mocked User Name : <span id='display'></span></p>
+  <p>Mocked Email_id/ User Name : <span id='display'></span></p>
+  
   <p>Mocked Password : <span id='display2'></span></p>
+
   </br>
   </br>
-   <p class="ex1"> Mocked Email id: <span id='em_display1'></span></p>
-  <p>Length of User Name : <span id='displayLen1'></span></p>
+ 
+  <p>Length of Email_id/User Name : <span id='displayLen1'></span></p>
   <p>Length of Password : <span id='displayLen2'></span></p>
   
  
@@ -124,7 +126,7 @@ var ep_pass_num_change = ep_pass_capitalchar_change.split('0').join('4');
 var ep_pass_symbolchanger=ep_pass_num_change.split('#').join('^');
  
 
-        document.getElementById('display').innerHTML = result;
+        document.getElementById('em_display1').innerHTML = result;
          document.getElementById('display2').innerHTML = ep_pass_symbolchanger; document.getElementById('displayLen1').innerHTML = result.length;
           document.getElementById('displayLen2').innerHTML = ep_pass_symbolchanger.length;
          
