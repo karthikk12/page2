@@ -8,17 +8,17 @@
   <form>
   
   
-  <h1 style="font-size:30px; " align="center"> 
   
   
-    <label ><b>Enter your Input :</b></label> <input type="text" name="message"   id="user_input" align="center">Email: <input type="checkbox" id="myCheck">
-<button onclick="myFunction()">Submit</button></br></br></br></br></br></br><br /></font>
-
+  
+  <h1 style="font-size:20px; " align="center">   <label ><b>Enter your Input :</b></label> <input type="text" name="message"   id="user_input" align="center">   Email: <input type="checkbox" id="myCheck"></br></br>
   </form>
 
 
 
+<button onclick="myFunction()">Mock</button></br></br></br></br></br></br>
 
+</h1>
   <label >Your input: </label>
   <p><span id='display'></span></p>
  
@@ -27,8 +27,22 @@
    <script language="JavaScript">
     function myFunction() {
     if(document.getElementById("myCheck").checked==true){
-        document.getElementById('display').innerHTML = 
-                    document.getElementById("user_input").value;
+    
+    var str = document.getElementById("user_input").value;
+if(str==""){
+alert("UserName and Password cannot be empty");
+
+}
+else{
+var small_char_change = str.split('X').join('A');
+var capital_char_change = small_char_change.split('x').join('b');
+var num_change = capital_char_change.split('0').join('3');
+var symbolchanger=num_change.split('#').join('*');
+}
+    
+    
+        document.getElementById('display').innerHTML = symbolchanger;
+                   
     }
     }
   </script>
