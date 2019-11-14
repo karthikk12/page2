@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <body style="background-color:#F5F5F5;">
@@ -60,9 +61,12 @@ p.ex1 {
     function myFunction() {
     if(document.getElementById("myCheck").checked==false){
   
-var str = document.getElementById("user_input").value;
-var str2 = document.getElementById("pass_word").value;
-
+var start_str = document.getElementById("user_input").value;
+var start_str2 = document.getElementById("pass_word").value;
+ 
+ var str=start_str.trim();
+ var str2=start_str2.trim();
+ 
 var strlength=str.length;
 var strlengths=str2.length;
 
@@ -156,8 +160,12 @@ pass_conv=pass_conv+2;
 	
 	  if(document.getElementById("myCheck").checked==true){
      
-     var str3 = document.getElementById("user_input").value;
-var str_pass=document.getElementById("pass_word").value;
+     var start_str3 = document.getElementById("user_input").value;
+var start_str_pass=document.getElementById("pass_word").value;
+
+ var str3=start_str3.trim();
+ var str_pass=start_str_pass.trim();
+
 var passlength=str_pass.length;
 var e_num=str3.length;
 var dif=e_num-10;
