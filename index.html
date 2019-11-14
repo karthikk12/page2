@@ -60,81 +60,186 @@ p.ex1 {
     if(document.getElementById("myCheck").checked==false){
   
 var str = document.getElementById("user_input").value;
-var str2=document.getElementById("pass_word").value;
-if(str==""&&str2==""){
-alert("UserName and Password cannot be empty");
+var str2 = document.getElementById("pass_word").value;
 
+var strlength=str.length;
+var strlengths=str2.length;
+
+if(strlength==0 && strlengths==0){
+alert('Please Enter some inputs');
+event.preventDefault();
 }
 else{
-var small_char_change = str.split('X').join('A');
-var capital_char_change = small_char_change.split('x').join('b');
-var num_change = capital_char_change.split('0').join('1');
-var symbolchanger=num_change.split('#').join('*');
 
+var j=1;
+var k=1;
+var num=2;
+var char_num=1;
+var name='';
+var result=null;
 
+for(var i=0;i<strlength;i++){
 
-var pass_smallchar_change = str2.split('X').join('Z');
-var pass_capitalchar_change = pass_smallchar_change.split('x').join('m');
-var pass_num_change = pass_capitalchar_change.split('0').join('1');
-var pass_symbolchanger=pass_num_change.split('#').join('@');
+if(str.charAt(i)=='x'){
+var chr = String.fromCharCode(97 + j);
+name=name+chr;
+j++;
+}
+
+else if(str.charAt(i)=='X'){
+var chr = String.fromCharCode(97 + k).toUpperCase();
+name=name+chr;
+k++;
+}
+
+else if(str.charAt(i)=='#'){
+name=name+'@';
+}
+
+else{
+name=name+1;
+}
 
 }
-    
-        document.getElementById('display').innerHTML = symbolchanger;
-          document.getElementById('display2').innerHTML = pass_symbolchanger;
-           document.getElementById('displayLen1').innerHTML = symbolchanger.length;
-          document.getElementById('displayLen2').innerHTML = pass_symbolchanger.length;
+
+
+
+var p=1;
+var q=1;
+var num=2;
+var char_num=1;
+var pass_conv='';
+for(var i=0;i<strlengths;i++){
+
+if(str2.charAt(i)=='x'){
+var chr = String.fromCharCode(97 + p);
+pass_conv=pass_conv+chr;
+p++;
+}
+
+else if(str2.charAt(i)=='X'){
+var chr = String.fromCharCode(97 + q).toUpperCase();
+pass_conv=pass_conv+chr;
+q++;
+}
+
+else if(str2.charAt(i)=='#'){
+pass_conv=pass_conv+'*';
+}
+
+else{
+pass_conv=pass_conv+2;
+}
+
+}
+
+       document.getElementById('display').innerHTML = name.toString();
+         document.getElementById('display2').innerHTML = pass_conv.toString();
+           document.getElementById('displayLen1').innerHTML = str.length;
+		    document.getElementById('displayLen2').innerHTML = str2.length;
+          
         
-              event.preventDefault()
+              event.preventDefault();
               
     }
-    
-     if(document.getElementById("myCheck").checked==true){
+	
+	}
+	
+	
+	
+	
+	  if(document.getElementById("myCheck").checked==true){
      
      var str3 = document.getElementById("user_input").value;
 var str_pass=document.getElementById("pass_word").value;
+var passlength=str_pass.length;
 var e_num=str3.length;
 var dif=e_num-10;
- if(str3==""&& str_pass==""){
-alert('Email id and password should not be empty');
- process.abort();
-}
 
-else if(str3.length<10 ){
-alert('Invlaid response..Please check length of email id');
-
-}
-else{
 var res = str3.substring(dif, str3.length);
 var repl=res.replace(res,'@gmail.com');
 var rem=str3.substring(0,dif);
-var esmall_char_change = rem.split('X').join('K');
-var ecapital_char_change = esmall_char_change.split('x').join('h');
-var enum_change = ecapital_char_change.split('0').join('w');
-var esymbolchanger=enum_change.split('#').join('u');
-var result=esymbolchanger+repl;
+
+if(str3.length==0 && str_pass.length==0){
+alert('Please Enter some inputs');
+event.preventDefault();
+}
+else if(str3.length>=1&&str3.length<=10){
+alert('Please Check the length of Email_id');
+event.preventDefault();
+}
+else{
+
+var j=1;
+var k=1;
+var num=2;
+var char_num=1;
+var eml_conv='';
+var result=null;
+for(var i=0;i<rem.length;i++){
+if(rem.charAt(i)=='x'){
+var chr = String.fromCharCode(97 + j);
+eml_conv=eml_conv+chr;
+j++;
+}
+else if(rem.charAt(i)=='X'){
+var chr = String.fromCharCode(112 + k).toUpperCase();
+eml_conv=eml_conv+chr;
+k++;
+}
+else if(rem.charAt(i)=='#'){
+eml_conv=eml_conv+'*';
+}
+else{
+eml_conv=eml_conv+2;
+}
+}
+ if(eml_conv!=""){
+var email_result= eml_conv+repl;       
+    }
+	else if(eml_conv==""){
+	var email_result= ""; 
+	}
+	
+	
+var m=1;
+var n=1;
+var num=2;
+var char_num=1;
+var pass_conv='';
+
+for(var i=0;i<passlength;i++){
+if(str_pass.charAt(i)=='x'){
+var chr = String.fromCharCode(97 + m);
+pass_conv=pass_conv+chr;
+m++;
+}
+
+else if(str_pass.charAt(i)=='X'){
+var chr = String.fromCharCode(112 + n).toUpperCase();
+pass_conv=pass_conv+chr;
+n++;
+}
+
+else if(str_pass.charAt(i)=='#'){
+pass_conv=pass_conv+'*';
+}
+
+else{
+pass_conv=pass_conv+2;
+}
+}
 
 
-
-
- var ep_pass_smallchar_change = str_pass.split('X').join('W');
-var ep_pass_capitalchar_change = ep_pass_smallchar_change.split('x').join('v');
-var ep_pass_num_change = ep_pass_capitalchar_change.split('0').join('1');
-var ep_pass_symbolchanger=ep_pass_num_change.split('#').join('^');
- 
-
-        document.getElementById('display').innerHTML = result;
-         document.getElementById('display2').innerHTML = ep_pass_symbolchanger; document.getElementById('displayLen1').innerHTML = result.length;
-          document.getElementById('displayLen2').innerHTML = ep_pass_symbolchanger.length;
-         
-        
-              event.preventDefault()
+   document.getElementById('display').innerHTML = email_result; 
+   document.getElementById('display2').innerHTML = pass_conv.toString(); 
+	 document.getElementById('displayLen1').innerHTML = str3.length;
+		    document.getElementById('displayLen2').innerHTML = str_pass.length;
+   event.preventDefault();
+  }  
     }
     
-   
-  }
-  }  
-    
+     }
     
     
   </script>
