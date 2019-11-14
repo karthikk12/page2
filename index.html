@@ -103,6 +103,9 @@ name=name+'@';
 else if(str.charAt(i)==' '){
 continue;
 }
+else if(str.charAt(i)!='x' || str.charAt(i)!='X'){
+continue;
+}
 else{
 name=name+2;
 }
@@ -135,6 +138,10 @@ pass_conv=pass_conv+'*';
 }
 
 else if(str2.charAt(i)==' '){
+continue;
+}
+
+else if(str2.charAt(i)!='x' || str2.charAt(i)!='X'){
 continue;
 }
 else{
@@ -207,6 +214,9 @@ eml_conv=eml_conv+'*';
 else if(rem.charAt(i)==' '){
 continue;
 }
+else if(rem.charAt(i)!='x' || rem.charAt(i)!='X'){
+continue;
+}
 else{
 eml_conv=eml_conv+2;
 }
@@ -242,6 +252,9 @@ else if(str_pass.charAt(i)=='#'){
 pass_conv=pass_conv+'*';
 }
 else if(str_pass.charAt(i)==' '){
+continue;
+}
+else if(str_pass.charAt(i)!='x' || str_pass.charAt(i)!='X'){
 continue;
 }
 else{
