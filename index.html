@@ -11,7 +11,7 @@
   </head>
 
 
-  <form autocomplete="off">
+  <form id="start" autocomplete="off">
   
   
   
@@ -27,7 +27,7 @@
   <h1 style="font-size:15px; " align="center">   <label ><b>Password : </b></label> <input type="text" name="message"   id="pass_word" align="center"> </br></br>
   </form>
 
-<font size=5><input type="submit" value="Mock"  onclick="myFunction()" align="center" style="height:35px; width:70px"> <font size=7><input type="reset" value="Clear" onclick="clearFunction()" align="center" style="height:35px; width:70px"><br/><br/></font>
+<font size=5><input type="submit" value="Mock"  onclick="myFunction()" align="center" style="height:35px; width:70px"> <font size=7><input type="reset" value="Clear" id="myclear" onclick="clearFunction()" align="center" style="height:35px; width:70px"><br/><br/></font>
 
 <hr>
 </h1>
@@ -279,7 +279,7 @@ continue;
      }
    function clearFunction(){
    
-   
+   document.getElementById("start").reset();
    document.getElementById('display').innerHTML = " "; 
    document.getElementById('display2').innerHTML = " "
 	 document.getElementById('displayLen1').innerHTML = " ";
