@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <body style="background-color:#F5F5F5;">
@@ -103,11 +104,12 @@ name=name+'@';
 else if(str.charAt(i)==' '){
 continue;
 }
+
+else if(str.charAt(i)>=0&&str.charAt(i)<=9){
+name=name+2;
+}
 else if(str.charAt(i)!='x' || str.charAt(i)!='X'){
 continue;
-}
-else{
-name=name+2;
 }
 
 }
@@ -140,13 +142,13 @@ pass_conv=pass_conv+'*';
 else if(str2.charAt(i)==' '){
 continue;
 }
-
+else if(str2.charAt(i)>=0&&str2.charAt(i)<=9){
+pass_conv=pass_conv+2;
+}
 else if(str2.charAt(i)!='x' || str2.charAt(i)!='X'){
 continue;
 }
-else{
-pass_conv=pass_conv+2;
-}
+
 
 }
 
@@ -214,12 +216,14 @@ eml_conv=eml_conv+'*';
 else if(rem.charAt(i)==' '){
 continue;
 }
+else if(rem.charAt(i)>=0&&rem.charAt(i)<=9){
+eml_conv=eml_conv+2;
+}
+
 else if(rem.charAt(i)!='x' || rem.charAt(i)!='X'){
 continue;
 }
-else{
-eml_conv=eml_conv+2;
-}
+
 }
  if(eml_conv!=""){
 var email_result= eml_conv+repl;       
@@ -254,12 +258,13 @@ pass_conv=pass_conv+'*';
 else if(str_pass.charAt(i)==' '){
 continue;
 }
+else if(rem.charAt(i)>=0&&rem.charAt(i)<=9){
+pass_conv=pass_conv+2;
+}
 else if(str_pass.charAt(i)!='x' || str_pass.charAt(i)!='X'){
 continue;
 }
-else{
-pass_conv=pass_conv+2;
-}
+
 }
 
 
