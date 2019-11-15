@@ -2,10 +2,19 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
-<body oncontextmenu="return false" style="background-color:#F5F5F5;">
-<h1 style="font-size:30px; color: Black"align="center">~~~~ Data Mocker ~~~~</h1></br>
+<body  onload="startdate();startTime();" style="background-color:#F5F5F5;">
+
+<p style="text-align:right;"> <strong><span style="float:right"; font-size:20px ;  font-weight:"bold" id='currenttim'></span></strong>
+<span style="float:left;"> <strong><span style="float:left"; font-size:20px ;  font-weight:"bold" id='currentdat'></span></strong>  </span>
+</p>
+
+
+
+
+<h1 style="font-size:30px; color: Black" align="center"> Data Mocker </h1></br>
   <head lang="en">
   <meta charset="UTF-8">
   </head>
@@ -58,8 +67,45 @@ p.ex1 {
   
    <script type="text/javascript">
    
-   
-    function myFunction() {
+function time_initializer(){
+if (i < 10) {
+    i = "0" + i;
+}
+return i;
+}
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+
+  var m = today.getMinutes();
+ 
+  var s = today.getSeconds();
+  
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('currenttim').innerHTML =h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+  if (i < 10) {
+  i = "0" + i
+  };  
+  return i;
+  
+}
+  
+function startdate(){
+var today = new Date();
+
+var resdate = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+
+ document.getElementById('currentdat').innerHTML =resdate;
+
+}
+  
+ function myFunction() {
     if(document.getElementById("myCheck").checked==false){
   
 var start_str = document.getElementById("user_input").value;
@@ -286,7 +332,12 @@ continue;
 		    document.getElementById('displayLen2').innerHTML = " ";
    event.preventDefault();
    } 
-    
+   
+   function curdate(){
+let today = new Date().toLocaleDateString();
+
+ document.getElementById('nowdate').innerHTML =today;  
+   } 
   </script>
 
 </body>
