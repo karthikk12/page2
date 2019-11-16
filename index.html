@@ -38,7 +38,7 @@
   <h1 style="font-size:15px; " align="center">   <label ><b>Password : </b></label> <input type="text" name="message"   id="pass_word" align="center"> </br></br>
   </form>
 
-<font size=5><input type="submit" value="Mock"  onclick="myFunction()" align="center" style="height:35px; width:70px"> <font size=7><input type="reset" value="Clear" id="myclear" onclick="clearFunction()" align="center" style="height:35px; width:70px"> <input type="button" align="center" style="height:35px; width:80px" onclick="window.location.href = 'https://karthikk12.github.io/MyFirstRepo1/';" value="MFA Page"/> </font>
+<font size=5><input type="submit" value="Mock"  onclick="myFunction()" align="center" style="height:35px; width:70px"> <font size=7><input type="reset" value="Clear" id="myclear" onclick="clearFunction()" align="center" style="height:35px; width:70px"> <input type="button" align="center" style="height:35px; width:80px" onclick="window.location.href = 'https://karthikk12.github.io/my-page/';" value="MFA Page"/> </font>
 
 
 
@@ -134,6 +134,7 @@ var j=1;
 var k=1;
 var num=2;
 var char_num=1;
+var count=0;
 var online_name='';
 var result=null;
 
@@ -162,6 +163,7 @@ else if(str0.charAt(i)>=0&&str0.charAt(i)<=9){
 online_name=online_name+2;
 }
 else if(str0.charAt(i)!='x' || str.charAt(i)!='X'){
+count++;
 continue;
 }
 
@@ -182,6 +184,7 @@ var k=1;
 var num=2;
 var char_num=1;
 var name='';
+var count1=0;
 var result=null;
 
 for(var i=0;i<strlength;i++){
@@ -209,6 +212,7 @@ else if(str.charAt(i)>=0&&str.charAt(i)<=9){
 name=name+2;
 }
 else if(str.charAt(i)!='x' || str.charAt(i)!='X'){
+count1++;
 continue;
 }
 
@@ -220,6 +224,7 @@ var p=1;
 var q=1;
 var num=2;
 var char_num=1;
+var count2=0;
 var pass_conv='';
 for(var i=0;i<strlengths;i++){
 
@@ -246,11 +251,13 @@ else if(str2.charAt(i)>=0&&str2.charAt(i)<=9){
 pass_conv=pass_conv+2;
 }
 else if(str2.charAt(i)!='x' || str2.charAt(i)!='X'){
+count2++;
 continue;
 }
 
 
 }
+if(count1==0&&count1==0&&count2==0){
 document.getElementById('display3').innerHTML = online_name.toString();
        document.getElementById('display').innerHTML = name.toString();
          document.getElementById('display2').innerHTML = pass_conv.toString();
@@ -262,6 +269,12 @@ document.getElementById('display3').innerHTML = online_name.toString();
               event.preventDefault();
               
     }
+	else{
+	 alert('Invalid Input....Input should only contains xX0#');
+			 event.preventDefault();
+	}
+	}
+
 	
 	}
 	
@@ -300,6 +313,7 @@ else{
 var j=1;
 var k=1;
 var num=2;
+var count4=0;
 var char_num=1;
 var online_name='';
 var result=null;
@@ -329,6 +343,7 @@ else if(str0.charAt(i)>=0&&str0.charAt(i)<=9){
 online_name=online_name+2;
 }
 else if(str0.charAt(i)!='x' || str.charAt(i)!='X'){
+count4++;
 continue;
 }
 
@@ -342,6 +357,7 @@ continue;
 var j=1;
 var k=1;
 var num=2;
+var count5=0;
 var char_num=1;
 var eml_conv='';
 var result=null;
@@ -367,6 +383,7 @@ eml_conv=eml_conv+2;
 }
 
 else if(rem.charAt(i)!='x' || rem.charAt(i)!='X'){
+count5++;
 continue;
 }
 
@@ -382,6 +399,7 @@ var email_result= eml_conv+repl;
 var m=1;
 var n=1;
 var num=2;
+var count6=0;
 var char_num=1;
 var pass_conv='';
 
@@ -408,11 +426,12 @@ else if(rem.charAt(i)>=0&&rem.charAt(i)<=9){
 pass_conv=pass_conv+2;
 }
 else if(str_pass.charAt(i)!='x' || str_pass.charAt(i)!='X'){
+count6++;
 continue;
 }
 
 }
-
+if(count4==0&&count5==0&&count6==0){
    
    document.getElementById('display').innerHTML = email_result; 
    document.getElementById('display2').innerHTML = pass_conv.toString(); 
@@ -421,7 +440,12 @@ document.getElementById('display3').innerHTML = online_name.toString();
 		    document.getElementById('displayLen2').innerHTML = str_pass.length;
 			document.getElementById('displayLen3').innerHTML = online_name.length;
    event.preventDefault();
-  }  
+  }
+else{
+ alert('Invalid Input....Input should only contains xX0#');
+			 event.preventDefault();
+}  
+}  
     }
     
      }
