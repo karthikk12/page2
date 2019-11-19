@@ -4,6 +4,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <body  onload="startdate();startTime();" style="background-color:#F5F5F5;">
@@ -134,6 +135,7 @@ var j=1;
 var k=1;
 var num=2;
 var char_num=1;
+var number_use=1;
 var count=0;
 var online_name='';
 var result=null;
@@ -160,7 +162,14 @@ continue;
 }
 
 else if(str0.charAt(i)>=0&&str0.charAt(i)<=9){
-online_name=online_name+2;
+
+if(number_use==9){
+ number_use=1;
+}
+else{
+online_name=online_name+number_use;
+number_use++;
+}
 }
 else if(str0.charAt(i)!='x' || str.charAt(i)!='X'){
 count++;
@@ -184,6 +193,7 @@ var j=1;
 var k=1;
 var num=2;
 var char_num=1;
+var number_use=1;
 var name='';
 var count1=0;
 var result=null;
@@ -210,7 +220,13 @@ continue;
 }
 
 else if(str.charAt(i)>=0&&str.charAt(i)<=9){
-name=name+2;
+if(number_use==9){
+ number_use=1;
+}
+else{
+name=name+number_use;
+number_use++;
+}
 }
 else if(str.charAt(i)!='x' || str.charAt(i)!='X'){
 count1++;
@@ -225,6 +241,7 @@ var p=1;
 var q=1;
 var num=2;
 var char_num=1;
+var number_use=1;
 var count2=0;
 var pass_conv='';
 for(var i=0;i<strlengths;i++){
@@ -249,7 +266,13 @@ else if(str2.charAt(i)==' '){
 continue;
 }
 else if(str2.charAt(i)>=0&&str2.charAt(i)<=9){
-pass_conv=pass_conv+2;
+if(number_use==9){
+ number_use=1;
+}
+else{
+pass_conv=pass_conv+number_use;
+number_use++;
+}
 }
 else if(str2.charAt(i)!='x' || str2.charAt(i)!='X'){
 count2++;
@@ -314,6 +337,7 @@ else{
 var j=1;
 var k=1;
 var num=2;
+var number_use=1;
 var count4=0;
 var char_num=1;
 var online_name='';
@@ -341,7 +365,13 @@ continue;
 }
 
 else if(str0.charAt(i)>=0&&str0.charAt(i)<=9){
-online_name=online_name+2;
+if(number_use==9){
+number_use=1;
+}
+else{
+online_name=online_name+number_use;
+number_use++;
+}
 }
 else if(str0.charAt(i)!='x' || str.charAt(i)!='X'){
 count4++;
@@ -360,6 +390,7 @@ var k=1;
 var num=2;
 var count5=0;
 var char_num=1;
+var number_use=1;
 var eml_conv='';
 var result=null;
 for(var i=0;i<rem.length;i++){
@@ -380,7 +411,13 @@ else if(rem.charAt(i)==' '){
 continue;
 }
 else if(rem.charAt(i)>=0&&rem.charAt(i)<=9){
-eml_conv=eml_conv+2;
+if(number_use==9){
+number_use=1;
+}
+else{
+eml_conv=eml_conv+number_use;
+number_use++;
+}
 }
 
 else if(rem.charAt(i)!='x' || rem.charAt(i)!='X'){
@@ -401,6 +438,7 @@ var m=1;
 var n=1;
 var num=2;
 var count6=0;
+var number_use=1;
 var char_num=1;
 var pass_conv='';
 
@@ -424,7 +462,13 @@ else if(str_pass.charAt(i)==' '){
 continue;
 }
 else if(rem.charAt(i)>=0&&rem.charAt(i)<=9){
-pass_conv=pass_conv+2;
+if(number_use==9){
+number_use=1;
+}
+else{
+pass_conv=pass_conv+number_use;
+number_use++;
+}
 }
 else if(str_pass.charAt(i)!='x' || str_pass.charAt(i)!='X'){
 count6++;
