@@ -5,6 +5,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <body  onload="startdate();startTime();" style="background-color:#F5F5F5;">
@@ -144,14 +145,30 @@ for(var i=0;i<strlength0;i++){
 
 if(str0.charAt(i)=='x'){
 var chr = String.fromCharCode(97 + j);
+if(j==26){
+j=1;
+var chr = String.fromCharCode(97 + j);
 online_name=online_name+chr;
 j++;
+}
+else{
+online_name=online_name+chr;
+j++;
+}
 }
 
 else if(str0.charAt(i)=='X'){
 var chr = String.fromCharCode(97 + k).toUpperCase();
+if(k==26){
+k=1;
+var chr = String.fromCharCode(97 + k).toUpperCase();
 online_name=online_name+chr;
 k++;
+}
+else{
+online_name=online_name+chr;
+k++;
+}
 }
 
 else if(str0.charAt(i)=='#'){
@@ -163,8 +180,10 @@ continue;
 
 else if(str0.charAt(i)>=0&&str0.charAt(i)<=9){
 
-if(number_use==9){
+if(number_use==10){
  number_use=1;
+ online_name=online_name+number_use;
+number_use++;
 }
 else{
 online_name=online_name+number_use;
@@ -202,14 +221,30 @@ for(var i=0;i<strlength;i++){
 
 if(str.charAt(i)=='x'){
 var chr = String.fromCharCode(97 + j);
+if(j==26){
+j=1;
+var chr = String.fromCharCode(97 + j);
 name=name+chr;
 j++;
+}
+else{
+name=name+chr;
+j++;
+}
 }
 
 else if(str.charAt(i)=='X'){
 var chr = String.fromCharCode(97 + k).toUpperCase();
+if(k==26){
+k=1;
+var chr = String.fromCharCode(97 + k).toUpperCase();
 name=name+chr;
 k++;
+}
+else{
+name=name+chr;
+k++;
+}
 }
 
 else if(str.charAt(i)=='#'){
@@ -220,8 +255,10 @@ continue;
 }
 
 else if(str.charAt(i)>=0&&str.charAt(i)<=9){
-if(number_use==9){
+if(number_use==10){
  number_use=1;
+ name=name+number_use;
+number_use++;
 }
 else{
 name=name+number_use;
@@ -245,17 +282,33 @@ var number_use=1;
 var count2=0;
 var pass_conv='';
 for(var i=0;i<strlengths;i++){
-
+var chr = String.fromCharCode(97 + p);
 if(str2.charAt(i)=='x'){
+if(p==26){
+p=1;
 var chr = String.fromCharCode(97 + p);
 pass_conv=pass_conv+chr;
 p++;
 }
+else{
+pass_conv=pass_conv+chr;
+p++;
+}
+}
 
 else if(str2.charAt(i)=='X'){
 var chr = String.fromCharCode(97 + q).toUpperCase();
+if(q==26){
+q=1;
+var chr = String.fromCharCode(97 + q).toUpperCase();
 pass_conv=pass_conv+chr;
 q++;
+}
+else{
+
+pass_conv=pass_conv+chr;
+q++;
+}
 }
 
 else if(str2.charAt(i)=='#'){
@@ -266,8 +319,10 @@ else if(str2.charAt(i)==' '){
 continue;
 }
 else if(str2.charAt(i)>=0&&str2.charAt(i)<=9){
-if(number_use==9){
+if(number_use==10){
  number_use=1;
+ pass_conv=pass_conv+number_use;
+number_use++;
 }
 else{
 pass_conv=pass_conv+number_use;
@@ -347,14 +402,32 @@ for(var i=0;i<strlength0;i++){
 
 if(str0.charAt(i)=='x'){
 var chr = String.fromCharCode(97 + j);
+if(j==26){
+j=1;
+var chr = String.fromCharCode(97 + j);
 online_name=online_name+chr;
 j++;
+}
+else{
+
+online_name=online_name+chr;
+j++;
+}
 }
 
 else if(str0.charAt(i)=='X'){
 var chr = String.fromCharCode(97 + k).toUpperCase();
+if(k==26){
+k=1;
+var chr = String.fromCharCode(97 + k).toUpperCase();
 online_name=online_name+chr;
 k++;
+}
+else{
+
+online_name=online_name+chr;
+k++;
+}
 }
 
 else if(str0.charAt(i)=='#'){
@@ -365,8 +438,10 @@ continue;
 }
 
 else if(str0.charAt(i)>=0&&str0.charAt(i)<=9){
-if(number_use==9){
+if(number_use==10){
 number_use=1;
+online_name=online_name+number_use;
+number_use++;
 }
 else{
 online_name=online_name+number_use;
@@ -394,15 +469,35 @@ var number_use=1;
 var eml_conv='';
 var result=null;
 for(var i=0;i<rem.length;i++){
+
 if(rem.charAt(i)=='x'){
+var chr = String.fromCharCode(97 + j);
+if(j==26){
+j=1;
 var chr = String.fromCharCode(97 + j);
 eml_conv=eml_conv+chr;
 j++;
 }
+else{
+
+eml_conv=eml_conv+chr;
+j++;
+}
+}
+
 else if(rem.charAt(i)=='X'){
-var chr = String.fromCharCode(112 + k).toUpperCase();
+var chr = String.fromCharCode(97 + k).toUpperCase();
+if(k==26){
+k=1;
+var chr = String.fromCharCode(97 + k).toUpperCase();
 eml_conv=eml_conv+chr;
 k++;
+}
+else{
+
+eml_conv=eml_conv+chr;
+k++;
+}
 }
 else if(rem.charAt(i)=='#'){
 eml_conv=eml_conv+'*';
@@ -411,8 +506,10 @@ else if(rem.charAt(i)==' '){
 continue;
 }
 else if(rem.charAt(i)>=0&&rem.charAt(i)<=9){
-if(number_use==9){
+if(number_use==10){
 number_use=1;
+eml_conv=eml_conv+number_use;
+number_use++;
 }
 else{
 eml_conv=eml_conv+number_use;
@@ -445,14 +542,31 @@ var pass_conv='';
 for(var i=0;i<passlength;i++){
 if(str_pass.charAt(i)=='x'){
 var chr = String.fromCharCode(97 + m);
+if(m==26){
+m=1;
+var chr = String.fromCharCode(97 + m);
 pass_conv=pass_conv+chr;
 m++;
 }
+else{
+pass_conv=pass_conv+chr;
+m++;
+}
+}
 
 else if(str_pass.charAt(i)=='X'){
-var chr = String.fromCharCode(112 + n).toUpperCase();
+var chr = String.fromCharCode(97 + n).toUpperCase();
+if(n==26){
+n=1;
+var chr = String.fromCharCode(97 + n).toUpperCase();
 pass_conv=pass_conv+chr;
 n++;
+}
+else{
+
+pass_conv=pass_conv+chr;
+n++;
+}
 }
 
 else if(str_pass.charAt(i)=='#'){
@@ -462,8 +576,10 @@ else if(str_pass.charAt(i)==' '){
 continue;
 }
 else if(rem.charAt(i)>=0&&rem.charAt(i)<=9){
-if(number_use==9){
+if(number_use==10){
 number_use=1;
+pass_conv=pass_conv+number_use;
+number_use++;
 }
 else{
 pass_conv=pass_conv+number_use;
