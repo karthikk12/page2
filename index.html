@@ -9,6 +9,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <body  onload="startdate();startTime();" style="background-color:#F5F5F5;">
@@ -382,7 +383,7 @@ var res = str3.substring(dif, str3.length);
 var repl=res.replace(res,'@gmail.com');
 var rem=str3.substring(0,dif);
 
-if(str3.length==0 && str_pass.length==0){
+if(str3.length==0 && str_pass.length==0 && str9.length==0){
 alert('Please Enter some inputs');
 event.preventDefault();
 }
@@ -464,6 +465,9 @@ continue;
 
 
 
+
+
+
 var j=1;
 var k=1;
 var num=2;
@@ -534,6 +538,13 @@ var email_result= eml_conv+repl;
 	var email_result= ""; 
 	}
 	
+
+
+
+
+
+
+
 	
 var m=1;
 var n=1;
@@ -579,7 +590,7 @@ pass_conv=pass_conv+'*';
 else if(str_pass.charAt(i)==' '){
 continue;
 }
-else if(rem.charAt(i)>=0&&rem.charAt(i)<=9){
+else if(str_pass.charAt(i)>=0&&str_pass.charAt(i)<=9){
 if(number_use==10){
 number_use=1;
 pass_conv=pass_conv+number_use;
@@ -596,6 +607,14 @@ continue;
 }
 
 }
+
+
+
+
+
+
+
+
 if(count4==0&&count5==0&&count6==0){
    
    document.getElementById('display').innerHTML = email_result; 
